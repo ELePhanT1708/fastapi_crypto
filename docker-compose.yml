@@ -1,15 +1,17 @@
 version: "3.11"
 
 services:
-  fastapi:
-    image: crypto_fastapi
-    build: .
-    ports:
-      - "8000:8000"
-    depends_on:
-      - db
-    volumes:
-      - ./src:/app/src
+#  fastapi:
+#    image: crypto_fastapi
+#    build: .
+#    env_file:
+#      - src/config.env
+#    ports:
+#      - "8000:8000"
+#    depends_on:
+#      - db
+#    volumes:
+#      - ./src:/app/src
   db:
     image: postgres:latest
     ports:
